@@ -1,0 +1,28 @@
+package DataStructureWithMosh.HashTable.examly;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class numbersFrequcne {
+
+
+    public class LettersFrequency {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            Map<Character , Integer> map = new HashMap<>();
+            String str = sc.nextLine();
+            str =str.toLowerCase();
+            char [] array = new char[128];
+            for(char ch :str.toCharArray()){
+                array[ch]++;
+            }
+            for(int i =0 ; i<128 ; i++ )
+                if(array[i] != 0)
+                    System.out.println((char)i+" - "+(int) array[i]);
+
+
+        }
+    }
+
+}
